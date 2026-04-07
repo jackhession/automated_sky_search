@@ -33,10 +33,10 @@ def move_and_select(target_char):
         steps = up
     
     for _ in range(steps):
-        #remote.press(direction)
+        remote.press(direction)
         time.sleep(0.5)  # small delay so Sky Q keeps up
     
-    #remote.press("select")
+    remote.press("select")
     current_index = target_index
 
 
@@ -44,9 +44,7 @@ def type_text(text):
     for char in text.upper():
         if char in key_map:
             move_and_select(char)
-            print(char, end='')
+            print(char, end='', flush=True)
             time.sleep(1)
 
-
-# Example usage
 type_text(input("Search: "))
