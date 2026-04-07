@@ -48,3 +48,4 @@ def type_text(text):
             time.sleep(1)
 
 type_text(input("Search: "))
+print(f"\n")
